@@ -34,17 +34,15 @@
   </build>
   
   <distributionManagement>
+    <snapshotRepository>
+      <id>nexus-releases</id>
+      <name>my snapshot repository</name>
+      <url>http://65.1.95.36:8081/repository/maven-releases/</url>
+    </snapshotRepository>
     <repository>
-        <id>nexus-releases</id>
-        <name>releases</name>
-        <url>http://3.110.118.55:8081/repository/maven-releases/</url>
+      <id>nexus-releases</id>
+      <name>my repository</name>
+      <url>http://65.1.95.36:8081/repository/maven-snapshots/</url>
     </repository>
-    
-    <repository>
-        <id>nexus-releases</id>
-        <name>releases</name>
-        <url>http://3.110.118.55:8081/repository/maven-snapshots/</url>
-    </repository>
-
-</distributionManagement>
+  </distributionManagement>
 </project>
