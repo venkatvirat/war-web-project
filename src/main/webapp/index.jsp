@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!This is demo of jenkins pipeline>
 <html>
 <head>
 	<title>WAR Web Service</title>
