@@ -1,17 +1,17 @@
 pipeline {
 	agent {
-		label "build server"
+		label "buildserver"
 	}
 
 	tools {
-		maven 'maven3.8'
+		maven 'maven'
 	}
 
 	stages {
 		stage('clone the repository') {
 			steps {
-				echo "clone the github reposotory"
-        git 'https://github.com/venkatvirat/war-web-project.git'
+			    echo "clone the github reposotory"
+                            git 'https://github.com/venkatvirat/war-web-project.git'
 			}
 		}
 
