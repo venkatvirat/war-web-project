@@ -1,19 +1,28 @@
 pipeline {
-	agent {
-		label "buildserver"
-	}
+    agent {
+        label 'buildserver'
+    }
 
-	tools {
-		maven 'maven'
-	}
+    tools {
+        maven 'maven'
+    }
 
-	stages {
-		stage('clone the repository') {
-			steps {
-			    echo "clone the github reposotory"
-                            git 'https://github.com/venkatvirat/war-web-project.git'
-			}
-		}
+    stages {
 
-	}
+        stage('clone the git repository') {
+            steps {
+                echo "clone the git repository"
+                git 'https://github.com/venkatvirat/war-web-project.git'
+            }
+        }
+
+        
+        stage('compilation') {
+            steps {
+                echo "compile the source code"
+                sh "mvn clean compile"
+            }
+        }
+    }
 }
+          
