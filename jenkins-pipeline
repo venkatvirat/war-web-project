@@ -39,7 +39,7 @@ pipeline {
             post {
                 success {
                     echo "archive the artifacts"
-                    archiveArtifacts artifacts: 'wwp-1.0.1-SNAPSHOT.war, followSymlink: false'
+                    archiveArtifacts artifacts: 'target/wwp-1.0.1-SNAPSHOT.war, followSymlink: false'
                 }
             }
         }
