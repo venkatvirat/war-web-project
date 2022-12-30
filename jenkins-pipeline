@@ -30,6 +30,13 @@ pipeline {
                 sh "mvn clean test"
             }
         }
+
+        stage('package the code') {
+            steps {
+                echo "package the source code"
+                sh "mvn clean package"
+            }
+        }
     }
 }
           
