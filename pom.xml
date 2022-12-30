@@ -33,16 +33,16 @@
     </plugins>
   </build>
   
-  <distributionManagement>
+   <distributionManagement>
     <snapshotRepository>
       <id>deployment</id>
       <name>my snapshot repository</name>
-      <url>http://54.194.165.230:8081/repository/maven-snapshots/</url>
+      <url>http://54.194.165.230:8081:8081/repository/maven-releases/</url>
     </snapshotRepository>
     <repository>
       <id>deployment</id>
       <name>my repository</name>
-      <url>http://54.194.165.230:8081/repository/maven-releases/</url>
+      <url>http://54.194.165.230:8081:8081/repository/maven-releases/</url>
     </repository>
   </distributionManagement>
 </project>
