@@ -1,0 +1,19 @@
+pipeline {
+	agent {
+		label "build server"
+	}
+
+	tools {
+		maven 'maven3.8'
+	}
+
+	stages {
+		stage('clone the repository') {
+			steps {
+				echo "clone the github reposotory"
+        git 'https://github.com/venkatvirat/war-web-project.git'
+			}
+		}
+
+	}
+}
