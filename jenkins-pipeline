@@ -23,6 +23,13 @@ pipeline {
                 sh "mvn clean compile"
             }
         }
+
+        stage('unit-test-cases') {
+            steps {
+                echo "run the unit test cases"
+                sh "mvn clean test"
+            }
+        }
     }
 }
           
